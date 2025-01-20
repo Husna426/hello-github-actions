@@ -1,0 +1,33 @@
+# Troubleshooting a Slow PC
+
+## **Issue**
+A Windows 10 PC was experiencing performance issues, including slow application launches and frequent freezing.
+
+---
+
+## **Steps Taken**
+1. **Analyzed System Resources**
+   - Used Task Manager to identify high CPU and memory usage processes.
+   - Noticed multiple startup applications consuming resources.
+
+2. **Optimized Startup Applications**
+   - Disabled unnecessary programs using `msconfig` and Task Manager's startup tab.
+
+3. **Performed Disk Cleanup**
+   - Used PowerShell to automate cleanup:
+     ```powershell
+     Get-ChildItem -Path "C:\Windows\Temp" -Recurse | Remove-Item -Force -ErrorAction SilentlyContinue
+     Clear-RecycleBin -Force
+     ```
+
+4. **Updated Hardware**
+   - Installed an SSD to replace the existing HDD, improving boot and application load times.
+
+---
+
+## **Outcome**
+- System boot time reduced by 70%.  
+- Applications now launch instantly.  
+- Overall performance significantly improved.
+
+---
